@@ -1,0 +1,28 @@
+<h2>Listing usuarios</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombreusuario</th>
+      <th>Identificador</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for usuario <- @usuarios do %>
+    <tr>
+      <td><%= usuario.nombreusuario %></td>
+      <td><%= usuario.identificador %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: usuario_path(@conn, :show, usuario), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: usuario_path(@conn, :edit, usuario), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: usuario_path(@conn, :delete, usuario), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New usuario", to: usuario_path(@conn, :new) %>

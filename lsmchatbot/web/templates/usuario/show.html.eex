@@ -1,0 +1,18 @@
+<h2>Show usuario</h2>
+
+<ul>
+
+  <li>
+    <strong>Nombreusuario:</strong>
+    <%= @usuario.nombreusuario %>
+  </li>
+
+  <li>
+    <strong>Identificador:</strong>
+    <%= @usuario.identificador %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: usuario_path(@conn, :edit, @usuario) %>
+<%= link "Back", to: usuario_path(@conn, :index) %>
