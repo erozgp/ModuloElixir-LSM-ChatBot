@@ -1,4 +1,5 @@
 # Lsmchatbot
+Módulo que funciona como visualizador de los inicios de sesión y uso del LSM-ChatBot para Telegram
 
 To start your Phoenix app:
 
